@@ -185,7 +185,7 @@ def convert_to_bert_input_ids(review, max_seq_length):
           review,
           add_special_tokens=True,
           ### BEGIN SOLUTION - DO NOT delete this comment for grading purposes
-          max_length=None, # Replace None
+          max_length=max_seq_length, # Replace None
           ### END SOLUTION - DO NOT delete this comment for grading purposes
           return_token_type_ids=False,
           padding='max_length',
@@ -403,6 +403,7 @@ def _preprocess_file(file,
         except:
             pass
         print('Offline store status: {}'.format(offline_store_status))    
+        sleep(15)
     print('...features ingested!')
 
 
