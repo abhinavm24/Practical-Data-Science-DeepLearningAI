@@ -403,6 +403,7 @@ def _preprocess_file(file,
         except:
             pass
         print('Offline store status: {}'.format(offline_store_status))    
+        sleep(15)
     print('...features ingested!')
 
 
